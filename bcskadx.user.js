@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         八叉书库广告屏蔽
 // @namespace    https://bachashuku.cc/
-// @version      1.2.0
+// @version      1.2.1
 // @description  屏蔽 bachashuku.cc 常见广告元素与弹窗
 // @author       you
 // @match        https://bachashuku.cc/*
@@ -160,7 +160,10 @@
         }
       }
     }
-    if (hasElementAdded) removeKnownAdContainers(document);
+    if (hasElementAdded) {
+      removeKnownAdContainers(document);
+      autoSubmitFreeChapter(document);
+    }
   });
 
   observer.observe(document.documentElement, {
