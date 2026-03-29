@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         八叉书库广告屏蔽
 // @namespace    https://bachashuku.cc/
-// @version      1.2.1
+// @version      1.2.3
 // @description  屏蔽 bachashuku.cc 常见广告元素与弹窗
 // @author       you
 // @match        https://bachashuku.cc/*
@@ -111,6 +111,8 @@
     };
   }
 
+  const AUTO_SUBMIT_GUARD = new Map();
+
   function autoSubmitFreeChapter(root = document) {
     const form = root.querySelector('form[name="frmbuychapter"]') || document.querySelector('form[name="frmbuychapter"]');
     if (!form) return;
@@ -118,19 +120,35 @@
     const buyType0 = form.querySelector('input[name="buytype"][value="0"]');
     const hotEl = form.querySelector('span.hot');
     const submitBtn = form.querySelector('button[type="submit"], input[type="submit"]');
-    const cid = form.querySelector('input[name="cid"]')?.value || '';
-    const key = `tm_bacha_free_submitted_${cid}`;
+    const cid = form.querySelector('input[name="cid"]')?.value || 'unknown';
 
     if (!buyType0 || !hotEl || !submitBtn) return;
+    if (!/\/modules\/obook\/buychapter\.php/i.test(form.action || '')) return;
 
     const price = parseInt((hotEl.textContent || '').replace(/[^\d]/g, ''), 10);
     if (!Number.isFinite(price) || price !== 0) return;
 
-    if (sessionStorage.getItem(key) === '1') return;
+    const guardKey = `${location.pathname}|${cid}`;
+    const now = Date.now();
+    const last = AUTO_SUBMIT_GUARD.get(guardKey) || 0;
+    if (now - last < 2000) return;
 
+    AUTO_SUBMIT_GUARD.set(guardKey, now);
     buyType0.checked = true;
-    sessionStorage.setItem(key, '1');
-    form.submit();
+
+    try {
+      if (typeof submitBtn.click === 'function') {
+        submitBtn.click();
+      } else if (typeof form.requestSubmit === 'function') {
+        form.requestSubmit(submitBtn);
+      } else {
+        form.submit();
+      }
+    } finally {
+      setTimeout(() => {
+        if (document.contains(form)) AUTO_SUBMIT_GUARD.delete(guardKey);
+      }, 3000);
+    }
   }
 
 
@@ -163,6 +181,7 @@
     if (hasElementAdded) {
       removeKnownAdContainers(document);
       autoSubmitFreeChapter(document);
+      setTimeout(() => autoSubmitFreeChapter(document), 150);
     }
   });
 
