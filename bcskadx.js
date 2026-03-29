@@ -109,6 +109,29 @@
     };
   }
 
+  function autoSubmitFreeChapter(root = document) {
+    const form = root.querySelector('form[name="frmbuychapter"]') || document.querySelector('form[name="frmbuychapter"]');
+    if (!form) return;
+
+    const buyType0 = form.querySelector('input[name="buytype"][value="0"]');
+    const hotEl = form.querySelector('span.hot');
+    const submitBtn = form.querySelector('button[type="submit"], input[type="submit"]');
+    const cid = form.querySelector('input[name="cid"]')?.value || '';
+    const key = `tm_bacha_free_submitted_${cid}`;
+
+    if (!buyType0 || !hotEl || !submitBtn) return;
+
+    const price = parseInt((hotEl.textContent || '').replace(/[^\d]/g, ''), 10);
+    if (!Number.isFinite(price) || price !== 0) return;
+
+    if (sessionStorage.getItem(key) === '1') return;
+
+    buyType0.checked = true;
+    sessionStorage.setItem(key, '1');
+    form.submit();
+  }
+
+
   injectHideStyle();
   blockPopup();
 
@@ -130,6 +153,7 @@
           hasElementAdded = true;
           removeKnownAdContainers(node);
           removeAds(node);
+          autoSubmitFreeChapter(node);
         }
       }
     }
