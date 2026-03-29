@@ -1,13 +1,15 @@
 // ==UserScript==
 // @name         八叉书库广告屏蔽
 // @namespace    https://bachashuku.cc/
-// @version      1.1.5
+// @version      1.2.0
 // @description  屏蔽 bachashuku.cc 常见广告元素与弹窗
 // @author       you
 // @match        https://bachashuku.cc/*
 // @match        https://www.bachashuku.cc/*
 // @grant        none
 // @run-at       document-end
+// @downloadURL  https://raw.githubusercontent.com/20f11c/cgh/main/bcskadx.user.js
+// @updateURL    https://raw.githubusercontent.com/20f11c/cgh/main/bcskadx.user.js
 // ==/UserScript==
 
 (function () {
@@ -138,6 +140,7 @@
   const onReady = () => {
     removeKnownAdContainers(document);
     removeAds(document);
+    autoSubmitFreeChapter(document);
   };
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', onReady, { once: true });
