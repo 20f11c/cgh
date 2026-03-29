@@ -12,9 +12,9 @@ Tampermonkey 用户脚本项目。
 
 ## 脚本清单
 
-| 文件名 | 脚本名称 | 目标站点 | 当前版本 | 安装链接 |
-| --- | --- | --- | --- | --- |
-| `bcskadx.user.js` | `八叉书库广告屏蔽` | `bachashuku.cc` / `www.bachashuku.cc` | `1.2.3` | `https://raw.githubusercontent.com/20f11c/cgh/main/bcskadx.user.js` |
+| 文件 | 名称 | 站点 | 版本 | 安装 |
+| :-- | :-- | :-- | :--: | :--: |
+| bcskadx.user.js | 八叉书库广告屏蔽 | bachashuku.cc / www.bachashuku.cc | 1.2.3 | [安装](https://raw.githubusercontent.com/20f11c/cgh/main/bcskadx.user.js) |
 
 ### `bcskadx.user.js` 功能
 
@@ -57,4 +57,4 @@ Tampermonkey 用户脚本项目。
 
 - 一个脚本一个文件
 - 文件名建议使用：`<site-or-feature>.user.js`
-- 新脚本加入后，在本 README 的“当前脚本”中补充说明
+- 新脚本加入后，在本 README 的“脚本清单”中补充说明
