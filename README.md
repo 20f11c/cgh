@@ -12,11 +12,16 @@ Tampermonkey 用户脚本项目。
 
 ## 脚本清单
 
-### 八叉书库广告屏蔽
-- 文件：`bcskadx.user.js`
-- 站点：`bachashuku.cc` / `www.bachashuku.cc`
-- 版本：`1.2.3`
-- 安装：[点击安装](https://raw.githubusercontent.com/20f11c/cgh/main/bcskadx.user.js)
+> ### 八叉书库广告屏蔽
+>
+> [![File](https://img.shields.io/badge/File-bcskadx.user.js-111827?style=flat-square)](./bcskadx.user.js)
+> [![Version](https://img.shields.io/badge/Version-1.2.3-2563eb?style=flat-square)](./bcskadx.user.js)
+> [![Site](https://img.shields.io/badge/Site-bachashuku.cc-0f766e?style=flat-square)](https://bachashuku.cc)
+> [![Site](https://img.shields.io/badge/Site-www.bachashuku.cc-0f766e?style=flat-square)](https://www.bachashuku.cc)
+> [![Install](https://img.shields.io/badge/Tampermonkey-点击安装-f59e0b?style=flat-square)](https://raw.githubusercontent.com/20f11c/cgh/main/bcskadx.user.js)
+>
+> 功能标签：`去广告` `弹窗拦截` `0金币自动订阅`
+
 
 ### `bcskadx.user.js` 功能
 
