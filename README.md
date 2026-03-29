@@ -1,4 +1,4 @@
-# cgh
+# 篡改猴脚本
 
 Tampermonkey 用户脚本项目。
 
@@ -10,17 +10,14 @@ Tampermonkey 用户脚本项目。
 - 支持多站点、可持续扩展
 - 每个脚本独立版本、独立更新地址
 
-## 当前脚本
+## 脚本清单
 
-### `bcskadx.user.js`
+| 文件名 | 脚本名称 | 目标站点 | 当前版本 | 安装链接 |
+| --- | --- | --- | --- | --- |
+| `bcskadx.user.js` | `八叉书库广告屏蔽` | `bachashuku.cc` / `www.bachashuku.cc` | `1.2.3` | `https://raw.githubusercontent.com/20f11c/cgh/main/bcskadx.user.js` |
 
-- 脚本名称：`八叉书库广告屏蔽`
-- 目标站点：
-  - `https://bachashuku.cc/*`
-  - `https://www.bachashuku.cc/*`
-- 当前版本：`1.2.3`
+### `bcskadx.user.js` 功能
 
-#### 功能
 
 1. 广告元素屏蔽
    - 屏蔽常见广告 `iframe/script/ins` 节点
