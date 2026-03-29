@@ -8,8 +8,8 @@
 // @match        https://www.bachashuku.cc/*
 // @grant        none
 // @run-at       document-end
-// @downloadURL  https://raw.githubusercontent.com/20f11c/cgh/main/bcskadx.user.js
-// @updateURL    https://raw.githubusercontent.com/20f11c/cgh/main/bcskadx.user.js
+// @downloadURL  https://gh-proxy.org/https://github.com/20f11c/cgh/raw/refs/heads/main/bcskadx.user.js
+// @updateURL    https://gh-proxy.org/https://github.com/20f11c/cgh/raw/refs/heads/main/bcskadx.user.js
 // ==/UserScript==
 
 (function () {
