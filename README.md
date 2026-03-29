@@ -12,11 +12,14 @@ Tampermonkey 用户脚本项目。
 
 ## 脚本清单
 
-| 文件 | 名称 | 站点 | 版本 | 安装 |
-| :-- | :-- | :-- | :--: | :--: |
-| bcskadx.user.js | 八叉书库广告屏蔽 | bachashuku.cc / www.bachashuku.cc | 1.2.3 | [安装](https://raw.githubusercontent.com/20f11c/cgh/main/bcskadx.user.js) |
+### 八叉书库广告屏蔽
+- 文件：`bcskadx.user.js`
+- 站点：`bachashuku.cc` / `www.bachashuku.cc`
+- 版本：`1.2.3`
+- 安装：[点击安装](https://raw.githubusercontent.com/20f11c/cgh/main/bcskadx.user.js)
 
 ### `bcskadx.user.js` 功能
+
 
 
 1. 广告元素屏蔽
