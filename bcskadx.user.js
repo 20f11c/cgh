@@ -3,7 +3,7 @@
 // @namespace    https://bachashuku.cc/
 // @version      1.2.3
 // @description  屏蔽 bachashuku.cc 常见广告元素与弹窗
-// @author       you
+// @author       20f11c
 // @match        https://bachashuku.cc/*
 // @match        https://www.bachashuku.cc/*
 // @grant        none
