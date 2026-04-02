@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         八叉书库广告屏蔽
 // @namespace    https://bachashuku.cc/
-// @version      1.2.3
+// @version      1.2.4
 // @description  屏蔽 bachashuku.cc 常见广告元素与弹窗
 // @author       20f11c
 // @match        https://bachashuku.cc/*
