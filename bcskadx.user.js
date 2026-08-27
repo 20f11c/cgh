@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         八叉书库广告屏蔽
-// @namespace    https://bachashuku.cc/
-// @version      1.2.4
-// @description  屏蔽 bachashuku.cc 常见广告元素与弹窗
+// @namespace    https://bachashuku.org/
+// @version      1.2.5
+// @description  屏蔽 bachashuku.org 常见广告元素与弹窗
 // @author       20f11c
-// @match        https://bachashuku.cc/*
-// @match        https://www.bachashuku.cc/*
+// @match        https://bachashuku.org/*
+// @match        https://www.bachashuku.org/*
 // @grant        none
 // @run-at       document-end
 // @downloadURL  https://gh-proxy.org/https://github.com/20f11c/cgh/raw/refs/heads/main/bcskadx.user.js
